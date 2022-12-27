@@ -1,0 +1,40 @@
+GET http://localhost:8080/api/test/all HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/test/user HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/test/mod HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/test/admin HTTP/1.1
+
+###
+
+POST http://localhost:8080/api/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mod",
+    "email": "mod@rivrmizt.com",
+    "password": "modpassword",
+    "roles": [
+        "moderator",
+        "user"
+    ]
+}
+###
+POST http://localhost:8080/api/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mod",
+    "password": "modpassword"
+}
+
+###
+
+
